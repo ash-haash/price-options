@@ -7,7 +7,7 @@ const PriceOptions = props => {
         {
             "id": 1,
             "name": "Basic",
-            "price": "$30/month",
+            "price": "$30/",
             "features": [
                 "Access to cardio equipment",
                 "Access to weight lifting area",
@@ -17,7 +17,7 @@ const PriceOptions = props => {
         {
             "id": 2,
             "name": "Standard",
-            "price": "$50/month",
+            "price": "$50/",
             "features": [
                 "Access to all Basic features",
                 "Group fitness classes included",
@@ -27,7 +27,7 @@ const PriceOptions = props => {
         {
             "id": 3,
             "name": "Premium",
-            "price": "$80/month",
+            "price": "$80/",
             "features": [
                 "Access to all Standard features",
                 "Unlimited group fitness classes",
@@ -39,15 +39,17 @@ const PriceOptions = props => {
 
 
     return (
-        <div>
-            <h2 className="text-5xl">Best Price in the Town</h2>
-            {
-                priceOptions.map(option =>
-                    <PriceOption
-                        key={option.id}
-                        option={option}
-                    ></PriceOption>)
-            }
+        <div className="m-12">
+            <h2 className="text-5xl mb-6 p-4 shadow-lg">Best Price in the Town</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+                {
+                    priceOptions.map(option =>
+                        <PriceOption
+                            key={option.id}
+                            option={option}
+                        ></PriceOption>)
+                }
+            </div>
         </div>
     );
 };
