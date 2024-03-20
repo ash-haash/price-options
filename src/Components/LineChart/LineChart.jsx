@@ -18,8 +18,8 @@ const LineChart = () => {
 
 
     return (
-        <div className="m-16">
-            <LChart width={500} height={400} data={studentsData}>
+        <div className="m-16 text-black">
+            <LChart className="text-black" width={500} height={400} data={studentsData} color={'black'}>
                 <Line dataKey={'math'} stroke='red'></Line>
                 <Line dataKey={'physics'} stroke='blue'></Line>
                 <Line dataKey={'chemistry'} stroke='gray'></Line>
